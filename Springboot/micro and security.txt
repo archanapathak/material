@@ -1,0 +1,11 @@
+
+     we created Another microservice Auth-Service to manage security within microservices
+
+     register this as one of service in registry server eureka
+       this service does :
+       registration of new user , generate jwt token and validate token
+
+user send the requuest to api gateway with jwt token 
+first api gateway validate token if user has sent it as part of header or not , if yes 
+we will ask authentication service to validate that token
+if validated successfully then gateway will route and redirect the user to the requested microservice
